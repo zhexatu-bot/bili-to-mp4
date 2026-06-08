@@ -1,0 +1,31 @@
+{
+  "name": "bili-to-mp4",
+  "version": "1.0.0",
+  "description": "哔哩哔哩缓存视频转MP4工具",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^42.3.3",
+    "electron-builder": "^26.15.2"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "build": {
+    "appId": "com.bili-to-mp4.app",
+    "productName": "B站缓存转MP4",
+    "win": { "target": "nsis" },
+    "nsis": { "oneClick": false, "allowToChangeInstallationDirectory": true },
+    "directories": { "output": "dist" },
+    "extraResources": [
+      { "from": "ffmpeg", "to": "ffmpeg", "filter": ["**/*"] }
+    ]
+  }
+}

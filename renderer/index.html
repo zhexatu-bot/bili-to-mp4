@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B站缓存视频转MP4</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>🎬 B站缓存视频转 MP4</h1>
+      <span class="subtitle">哔哩哔哩缓存 → 通用 MP4</span>
+    </header>
+
+    <div class="config">
+      <div class="config-row">
+        <label>缓存目录</label>
+        <input type="text" id="cacheDir" value="E:\视频bili\download" placeholder="B站缓存目录">
+      </div>
+      <div class="config-row">
+        <label>输出目录</label>
+        <input type="text" id="outputDir" value="E:\视频bili\export_mp4" placeholder="MP4输出目录">
+      </div>
+      <button class="btn btn-primary" id="btnScan">🔍 扫描视频</button>
+    </div>
+
+    <div class="video-section" id="videoSection" style="display:none">
+      <div class="video-header">
+        <span id="videoCount">找到 0 个视频</span>
+        <label class="check-all"><input type="checkbox" id="checkAll" checked> 全选</label>
+      </div>
+      <div class="video-list" id="videoList"></div>
+
+      <div class="actions">
+        <button class="btn btn-primary" id="btnConvert">▶ 转换选中</button>
+        <button class="btn btn-ghost" id="btnOpenDir">📁 打开输出目录</button>
+      </div>
+    </div>
+
+    <div class="progress-section" id="progressSection" style="display:none">
+      <div class="progress-bar-container">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+      <div class="progress-text" id="progressText"></div>
+      <div class="progress-stats" id="progressStats"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
