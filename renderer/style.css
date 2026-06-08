@@ -6,7 +6,13 @@ body {
   color: #333;
 }
 
-.app { max-width: 800px; margin: 0 auto; padding: 24px; }
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app { max-width: 800px; margin: 0 auto; padding: 24px; flex: 1; }
 
 .header { margin-bottom: 24px; }
 .header h1 { font-size: 22px; font-weight: 600; }
@@ -136,4 +142,23 @@ body {
   15% { opacity: 1; transform: translateY(0); }
   85% { opacity: 1; }
   100% { opacity: 0; }
+}
+
+/* 页脚 */
+.app-footer {
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 12px;
+  color: #aaa;
+  background: #f0f2f5;
+  flex-shrink: 0;
+}
+
+.app-footer a {
+  color: #999;
+  text-decoration: none;
+}
+
+.app-footer a:hover {
+  color: #4f46e5;
 }
